@@ -1,0 +1,119 @@
+.basketballPlayerCard {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .basketballPlayerCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .basketballPlayerCard:hover::before {
+    opacity: 1;
+  }
+  
+  .playerImage {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .playerImage {
+    transform: scale(1.05);
+  }
+  
+  .playerInfo {
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .playerInfo {
+    background-color: transparent;
+  }
+  
+  .playerName {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .playerName {
+    color: #fff;
+  }
+  
+  .playerPosition {
+    margin: 8px 0 0;
+    font-size: 18px;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .playerPosition {
+    color: #f0f0f0;
+  }
+  
+  .playerStats {
+    background-color: rgba(249, 249, 249, 0.8);
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .playerStats {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .statLabel {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .statLabel {
+    color: #fff;
+  }
+  
+  .statValue {
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .basketballPlayerCard:hover .statValue {
+    color: #f0f0f0;
+  }
+  
+  @media (max-width: 480px) {
+    .basketballPlayerCard {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
